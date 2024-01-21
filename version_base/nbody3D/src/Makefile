@@ -1,8 +1,8 @@
-CC=gcc
+CC=clang
 
 CFLAGS=-march=native -g3
 
-OFLAGS=-O0 -fopenmp -fopt-info-all=nbody.gcc.optrpt
+OFLAGS=-Ofast -fopenmp -Rpass=loop-vectorize
 
 all: nbody3D
 
